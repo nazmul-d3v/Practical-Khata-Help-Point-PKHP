@@ -17,8 +17,8 @@
     <img src="https://img.shields.io/badge/🌐_লাইভ_ওয়েবসাইট_ভিজিট_করুন-my--pkhp.vercel.app-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
   </a>
   &nbsp;
-  <a href="https://github.com/nazmul-d3v/My-PKHP" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub_Repo-My--PKHP-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
+  <a href="https://github.com/nazmul-d3v/Practical-Khata-Help-Point-PKHP" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub_Repo-PKHP-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
   </a>
 </p>
 
