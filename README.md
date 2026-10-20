@@ -6,15 +6,25 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://my-pkhp.vercel.app)
 [![Coverage](https://img.shields.io/badge/কুরিয়ার_কাভারেজ-৬৪_জেলা_🇧🇩-006a4e?style=for-the-badge)](https://wa.me/8801942470982)
 [![Delivery](https://img.shields.io/badge/ক্যাশ_অন_ডেলিভারি-Active-success?style=for-the-badge)]()
-[![Status](https://img.shields.io/badge/Status-Live_Production-blueviolet?style=for-the-badge)]()
 
 <br/>
 
+<p align="center">
+  <a href="https://my-pkhp.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_লাইভ_ওয়েবসাইট_ভিজিট_করুন-my--pkhp.vercel.app-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/nazmul-d3v/My-PKHP" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub_Repo-My--PKHP-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
+  </a>
+</p>
+
 > **"সুন্দর হাতের লেখা, নির্ভুল চিত্র ও নিখুঁত গ্রাফ সম্বলিত বোর্ড-স্ট্যান্ডার্ড প্র্যাকটিক্যাল খাতা — সরাসরি আপনার ঠিকানায় পৌঁছে দেওয়ার আধুনিক প্ল্যাটফর্ম।"**
 
-[🌟 মূল সুবিধাসমূহ](#-মূল-ফিচারসমূহ) • [🧮 লাইভ ক্যালকুলেটর](#-লাইভ-ক্যালকুলেটর) • [🖼️ বাস্তব ডেমো গ্যালারি](#-বাস্তব-নমুনা-গ্যালারি) • [🛡️ অ্যাডমিন পোর্টাল](#-সুরক্ষিত-অ্যাডমিন-পোর্টাল) • [🚀 ইনস্টলেশন](#-প্রজেক্ট-চালু-করার-নিয়ম) • [📞 যোগাযোগ](#-যোগাযোগ-ও-অর্ডার)
+[🌐 লাইভ ওয়েবসাইট (Vercel)](https://my-pkhp.vercel.app) • [🌟 মূল সুবিধাসমূহ](#-মূল-ফিচারসমূহ) • [🧮 লাইভ ক্যালকুলেটর](#-লাইভ-ক্যালকুলেটর) • [🖼️ বাস্তব ডেমো গ্যালারি](#-বাস্তব-নমুনা-গ্যালারি) • [🛡️ অ্যাডমিন পোর্টাল](#-সুরক্ষিত-অ্যাডমিন-পোর্টাল) • [🚀 ইনস্টলেশন](#-প্রজেক্ট-চালু-করার-নিয়ম) • [📞 যোগাযোগ](#-যোগাযোগ-ও-অর্ডার)
 
 ---
 
@@ -115,6 +125,12 @@ npx live-server --port=3000
 
 ### পদ্ধতি ৩: সরাসরি ব্রাউজারে ওপেন
 - `index.html` ফাইলটিতে ডাবল-ক্লিক করলেই যেকোনো আধুনিক ব্রাউজারে প্রজেক্টটি চালু হবে।
+
+### 🌐 পদ্ধতি ৪: Vercel ক্লাউড ডিপ্লয়মেন্ট (Vercel Live Production)
+প্রজেক্টটি সরাসরি [Vercel](https://vercel.com)-এ হোস্ট করার জন্য কনফিগার করা:
+- 🔗 **লাইভ ইউআরএল:** [https://my-pkhp.vercel.app](https://my-pkhp.vercel.app)
+- **অটোমেটিক সিআই/সিডি (CI/CD):** GitHub-এর `main` ব্রাঞ্চে কোনো আপডেট পুশ হলেই Vercel স্বয়ংক্রিয়ভাবে প্রজেক্টটি ডিপ্লয় ও আপডেট করে দেয়।
+- **ম্যানুয়াল ডিপ্লয়:** টার্মিনালে `npx vercel --prod` রান করে সরাসরি ডিপ্লয় করা যায়।
 
 ---
 
