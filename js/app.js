@@ -556,6 +556,21 @@ ${subListText || 'কোনো বিষয় নির্বাচন করা �
         mobileToggle.classList.remove('active');
       });
     });
+
+    // Close mobile menu when clicking outside or pressing Escape
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('open');
+        mobileToggle.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        mobileToggle.classList.remove('active');
+      }
+    });
   }
 
   // --- Real Samples Multi-Image Gallery & Lightbox Controller ---
@@ -1301,29 +1316,20 @@ ${discount > 0 ? `🏷️ *প্যাকেজ ছাড়:* -৳${discount}\n` 
   const editOrderStatus = document.getElementById('editOrderStatus');
   const editAdminNotes = document.getElementById('editAdminNotes');
 
-  // Pre-seed latest order (#PKHP-148859) if storage is empty so admin sees test order
+  // Clean up any legacy hardcoded mock test order (PKHP-148859) so storage stays clean
   try {
     const existing = localStorage.getItem('pkhp_orders_list');
-    if (!existing || JSON.parse(existing).length === 0) {
-      localStorage.setItem('pkhp_orders_list', JSON.stringify([{
-        orderId: 'PKHP-148859',
-        studentName: 'Nazmul Islam',
-        studentPhone: '01942470982',
-        studentCollege: 'acc',
-        studentAddress: 'Dhaka',
-        studentNotes: 'জরুরি ডেলিভারি প্রয়োজন',
-        level: 'HSC (Science)',
-        subjects: ['পদার্থবিজ্ঞান ১ম ও ২য়', 'রসায়ন ১ম ও ২য়', 'জীববিজ্ঞান ১ম ও ২য়', 'উচ্চতর গণিত ১ম ও ২য়'],
-        khataStatus: 'হ্যাঁ, নতুন প্র্যাকটিক্যাল খাতা সহ (4টি = ৳400)',
-        deliveryLocationName: 'ঢাকা',
-        grandTotal: '৳2020',
-        status: 'pending',
-        adminNotes: 'শিক্ষার্থীর সাথে ফোনে কথা হয়েছে',
-        timestamp: new Date().toLocaleString('bn-BD', { timeZone: 'Asia/Dhaka' })
-      }]));
+    if (existing) {
+      const orders = JSON.parse(existing);
+      if (Array.isArray(orders)) {
+        const cleaned = orders.filter(o => o.orderId !== 'PKHP-148859');
+        if (cleaned.length !== orders.length) {
+          localStorage.setItem('pkhp_orders_list', JSON.stringify(cleaned));
+        }
+      }
     }
   } catch (e) {
-    console.warn('Storage pre-seed notice:', e);
+    console.warn('Storage cleanup notice:', e);
   }
 
   // Helper for Order Status Badge
@@ -1413,7 +1419,7 @@ ${discount > 0 ? `🏷️ *প্যাকেজ ছাড়:* -৳${discount}\n` 
             <span style="font-size: 0.75rem; color: var(--text-muted);">${ord.timestamp || ''}</span>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.35rem 1rem; margin-bottom: 0.5rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.35rem 1rem; margin-bottom: 0.5rem;">
             <div><strong>👤 শিক্ষার্থী:</strong> ${ord.studentName || '—'}</div>
             <div><strong>📞 মোবাইল:</strong> <a href="tel:${ord.studentPhone}" style="color: var(--text-highlight); font-weight: 700;">${ord.studentPhone}</a></div>
             <div><strong>🏫 প্রতিষ্ঠান:</strong> ${ord.studentCollege || '—'}</div>
@@ -1674,9 +1680,10 @@ ${discount > 0 ? `🏷️ *প্যাকেজ ছাড়:* -৳${discount}\n` 
   if (clearAdminOrdersBtn) {
     clearAdminOrdersBtn.addEventListener('click', () => {
       if (confirm('আপনি কি নিশ্চিত যে সকল সংরক্ষিত অর্ডার মুছে ফেলতে চান? এই কাজটি আর পূর্বাবস্থায় ফিরিয়ে নেওয়া যাবে না।')) {
+        localStorage.setItem('pkhp_orders_list', JSON.stringify([]));
         localStorage.removeItem('pkhp_orders_list');
         renderAdminOrders();
-        showToast('সকল অর্ডার মুছে ফেলা হয়েছে।');
+        showToast('সকল অর্ডার সফলভাবে মুছে ফেলা হয়েছে।');
       }
     });
   }
