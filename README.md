@@ -7,7 +7,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://my-pkhp.vercel.app)
-[![Coverage](https://img.shields.io/badge/কুরিয়ার_কাভারেজ-৬৪_জেলা_🇧🇩-006a4e?style=for-the-badge)](https://wa.me/8801942470982)
+[![Coverage](https://img.shields.io/badge/কুরিয়ার_কাভারেজ-৬৪_জেলা_🇧🇩-006a4e?style=for-the-badge)](https://wa.me/8801982470982)
 [![Delivery](https://img.shields.io/badge/ক্যাশ_অন_ডেলিভারি-Active-success?style=for-the-badge)]()
 
 <br/>
@@ -163,7 +163,7 @@ npx live-server --port=3000
 
 ## 📞 যোগাযোগ ও অর্ডার (Contact & Support)
 
-- 📱 **হোয়াটসঅ্যাপ / হটলাইন:** [+880 1942-470982](https://wa.me/8801942470982)
+- 📱 **হোয়াটসঅ্যাপ / হটলাইন:** [+880 1982-470982](https://wa.me/8801982470982)
 - 📧 **ইমেইল:** [hello.nazzmul@gmail.com](mailto:hello.nazzmul@gmail.com)
 - 📍 **প্রধান কার্যালয়:** ঢাকা, বাংলাদেশ
 - ⏰ **সার্ভিস সময়:** প্রতিদিন সকাল ৯:০০ টা – রাত ১১:০০ টা

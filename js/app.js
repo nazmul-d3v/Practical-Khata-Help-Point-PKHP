@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       heroTitle2: 'এখন সহজেই হাতের নাগালে!',
       heroDesc: 'হাতে আঁকা নিখুঁত ও দৃষ্টিনন্দন চিত্র, বোর্ড অনুমোদিত ক্যালকুলেশন ও পরিচ্ছন্ন স্পষ্ট হাতের লেখায় তৈরি খাতা। কোনো চিন্তা ছাড়াই পরীক্ষায় নিশ্চিত করুন ২৫/২৫ নম্বর!',
       btnCalculate: 'খরচ হিসাব করুন',
-      btnChatWa: 'WhatsApp (01942470982)',
+      btnChatWa: 'WhatsApp (01982470982)',
       trustDelivery: '৬৪ জেলায় হোম ডেলিভারি',
       trustHandwriting: '১০০% পরিচ্ছন্ন হাতের লেখা',
       trustBoard: 'বোর্ড কারিকুলাম ২০২৩-২৬',
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       heroTitle2: 'Delivered to Your Doorstep!',
       heroDesc: 'Hand-drawn precision diagrams, board-standard calculations, and immaculate handwriting. Secure full 25/25 marks in your board practical exams effortlessly!',
       btnCalculate: 'Calculate Price',
-      btnChatWa: 'WhatsApp (01942470982)',
+      btnChatWa: 'WhatsApp (01982470982)',
       trustDelivery: 'Delivery to All 64 Districts',
       trustHandwriting: '100% Neat Handwriting',
       trustBoard: 'NCTB Board Syllabus 2023-26',
@@ -409,8 +409,8 @@ ${subListText || 'কোনো বিষয় নির্বাচন করা �
 
     if (waBtn) {
       const encodedMsg = encodeURIComponent(orderMsg);
-      // Practical Khata Help Point WhatsApp Order Link (01942470982)
-      waBtn.href = `https://wa.me/8801942470982?text=${encodedMsg}`;
+      // Practical Khata Help Point WhatsApp Order Link (01982470982)
+      waBtn.href = `https://wa.me/8801982470982?text=${encodedMsg}`;
       waBtn.target = '_blank';
     }
 
@@ -442,7 +442,7 @@ ${subListText || 'কোনো বিষয় নির্বাচন করা �
       updateCalculation();
       if (!waBtn.href || waBtn.href === '#' || waBtn.href.endsWith('#')) {
         e.preventDefault();
-        window.open('https://wa.me/8801942470982', '_blank');
+        window.open('https://wa.me/8801982470982', '_blank');
       }
     });
   }
@@ -1180,7 +1180,7 @@ ${subListText || 'কোনো বিষয় নির্বাচন করা �
         console.warn('FormSubmit notification notice:', err);
       }
 
-      // Pre-fill WhatsApp message with complete order details for 01942470982
+      // Pre-fill WhatsApp message with complete order details for 01982470982
       const subjectsDetailText = selectedList.map(s => `  • ${s.name} (৳${s.price})`).join('\n');
       const waRawMsg = 
 `*📦 নতুন খাতা অর্ডার — প্র্যাকটিক্যাল খাতা হেল্প পয়েন্ট*
@@ -1205,7 +1205,7 @@ ${discount > 0 ? `🏷️ *প্যাকেজ ছাড়:* -৳${discount}\n` 
 আমি ওয়েবসাইটে অর্ডারটি প্রস্তুত করেছি। দয়া করে আমার খাতাগুলো কনফার্ম করুন।`;
 
       const waConfirmationMsg = encodeURIComponent(waRawMsg);
-      const waDirectUrl = `https://wa.me/8801942470982?text=${waConfirmationMsg}`;
+      const waDirectUrl = `https://wa.me/8801982470982?text=${waConfirmationMsg}`;
 
       // Automatically launch WhatsApp with order details in a new window/tab
       try {
